@@ -1,0 +1,25 @@
+{
+  "name": "pr27-rabbitmq-workflow",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "api": "tsx src/index.ts",
+    "worker": "tsx src/worker.ts",
+    "workers": "tsx src/worker-launcher.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "start:worker": "node dist/worker.js"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.4",
+    "dotenv": "^17.4.2",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.10.7",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.10",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
+}
